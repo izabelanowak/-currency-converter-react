@@ -15,7 +15,7 @@ const TableContainer = ({ currencies }) => {
                 className="tableContainer__button"
                 onClick={toggleHideTable}
             >
-                {hideTable ? "Pokaż" : "Ukryj"} aktualne kursy walut
+                {hideTable ? "Wyświetl" : "Ukryj"} aktualne kursy walut
             </button>
             <Table currencies={currencies} hideTable={hideTable} />
             <p className={`tableContainer__paragraph${hideTable ? " tableContainer__paragraph--hidden" : ""}`}>
