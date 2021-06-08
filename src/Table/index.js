@@ -12,7 +12,7 @@ const Table = ({ currencies }) => (
         </thead>
         <tbody>
             {currencies.map(currency => (
-                <tr className="table__row">
+                <tr className="table__row" key={currency.id}>
                     <th className="table__cell table__cell--header" scope="row">
                         {currency.name}
                     </th>
