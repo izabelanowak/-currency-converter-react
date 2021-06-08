@@ -1,7 +1,7 @@
 import "./style.css";
 
-const Table = ({ currencies }) => (
-    <table className="table">
+const Table = ({ currencies, hideTable }) => (
+    <table className={`table${hideTable ? " table--hidden" : ""}`}>
         <caption className="table__caption">Aktualne kursy walut</caption>
         <thead>
             <tr className="table__row">
