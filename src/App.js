@@ -1,10 +1,19 @@
 import Form from "./Form";
 import Table from "./Table";
 import Container from "./Container";
+import { useState } from "react";
 
 
 
 function App() {
+  const [currency, setCurrency] = useState([
+    { id: "EUR", exchangeRate: 4.5654, name: "Euro", },
+    { id: "GBP", exchangeRate: 5.2491, name: "Funt brytyjski", },
+    { id: "USD", exchangeRate: 3.7746, name: "Dolar amerykański", },
+    { id: "CHF", exchangeRate: 4.1502, name: "Frank szwajcarski," },
+  ]);
+
+
   return (
     <>
       <Container>
