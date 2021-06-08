@@ -28,7 +28,6 @@
 
 .table__cell--header:hover {
     background-color: hsl(158, 76%, 30%);
-    ;
 }
 
 .table__cell {
@@ -40,42 +39,4 @@
 
 .table__row:hover {
     background-color: #ddd;
-}
-
-.table__button {
-    display: block;
-    margin: 0 auto;
-    padding: 15px;
-    width: 100%;
-    max-width: 600px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 22px;
-    color: #fff;
-    background-color: #0e6746;
-    border-radius: 10px;
-}
-
-.table__button:focus {
-    outline: none;
-    border-color: black;
-}
-
-.table__button:hover {
-    background-color: hsl(158, 76%, 30%);
-}
-
-.table__button:active {
-    background-color: hsl(158, 76%, 40%);
-    outline: none;
-}
-
-.table__paragraph {
-    margin: 10px auto;
-    padding: 10px 5px;
-    background-color: #fff;
-    width: 100%;
-    max-width: 600px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    text-align: center;
 }
