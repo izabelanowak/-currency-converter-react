@@ -1,12 +1,14 @@
 import './App.css';
 import Form from "./Form";
 import Table from "./Table";
+import Container from "./Container";
+
 
 
 function App() {
   return (
     <>
-      <div className="container">
+      <Container>
         <Form />
 
         <div className="tableContainer">
@@ -16,7 +18,7 @@ function App() {
           <Table />
           <p className="table__paragraph">Srednie kursy walut aktualne na dzień 01.05.2021r.</p>
         </div>
-      </div>
+      </Container>
     </>
   );
 }

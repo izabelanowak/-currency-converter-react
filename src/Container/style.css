@@ -1,0 +1,9 @@
+.container {
+    margin: 0 auto;
+    padding: 30px;
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    max-width: 800px;
+  }
