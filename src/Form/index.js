@@ -28,9 +28,7 @@ const Form = ({ currencies }) => {
                     Otrzymasz: <strong>N/A</strong><span> waluty</span>
                 </p>
             </fieldset>
-            <p>
-                <button type="submit" className="form__button">Przelicz!</button>
-            </p>
+            <button type="submit" className="form__button">Przelicz!</button>
         </form>
     )
 };
