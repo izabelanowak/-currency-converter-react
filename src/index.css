@@ -12,7 +12,3 @@ body {
   background-color: #eee;
   padding: 10px 20px;
 }
-
-.tableContainer {
-  overflow-x: auto;
-}

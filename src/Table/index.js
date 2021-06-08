@@ -25,9 +25,6 @@ const Table = ({ currencies }) => (
                 </tr>
             ))}
         </tbody>
-        <tfoot>
-            <p className="table__paragraph">Srednie kursy walut aktualne na dzień 01.05.2021r.</p>
-        </tfoot>
     </table>
 );
 
