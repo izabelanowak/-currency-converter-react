@@ -1,18 +1,15 @@
 import Form from "./Form";
 import Table from "./Table";
 import Container from "./Container";
-import curriencies from "./currencies";
+import currencies from "./currencies";
 
 
 
 function App() {
-
-
-
   return (
     <>
       <Container>
-        <Form />
+        <Form currencies={currencies} />
 
         <div className="tableContainer">
           <p>
