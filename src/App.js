@@ -1,4 +1,3 @@
-import './App.css';
 import Form from "./Form";
 import Table from "./Table";
 import Container from "./Container";
