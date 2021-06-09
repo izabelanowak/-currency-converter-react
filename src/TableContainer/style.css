@@ -8,7 +8,6 @@
   padding: 15px;
   width: 100%;
   max-width: 600px;
-  font-family: 'Roboto', sans-serif;
   font-size: 22px;
   color: #fff;
   background-color: #0e6746;
@@ -35,7 +34,6 @@
   background-color: #fff;
   width: 100%;
   max-width: 600px;
-  font-family: 'Roboto', sans-serif;
   font-size: 18px;
   text-align: center;
 }
