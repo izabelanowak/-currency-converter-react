@@ -4,11 +4,16 @@ import "./style.css";
 const Form = ({ currencies }) => {
     const [amount, setAmount] = useState(1);
     const [selectedCurrency, setSelectedCurrency] = useState("Euro");
+    const [result, setResult] = useState({
+        value: 0,
+        currency: "waluty",
+    });
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        const rate = currencies.find(({ name }) => name === selectedCurrency).exchangeRate;
-        const result = calculateResult(amount, rate);
+        const currency = currencies.find(({ name }) => name === selectedCurrency);
+        const result = calculateResult(amount, currency.exchangeRate);
+        setResult({ value: result, currency: currency.id });
     };
 
     const calculateResult = (amount, rate) => {
@@ -39,7 +44,7 @@ const Form = ({ currencies }) => {
                     </label>
                 </p>
                 <p className="form__result">
-                    Otrzymasz: <strong>N/A</strong><span> waluty</span>
+                    {`Otrzymasz ${result.value.toFixed(2)} ${result.currency}`}
                 </p>
             </fieldset>
             <button type="submit" className="form__button">Przelicz!</button>
