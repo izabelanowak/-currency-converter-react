@@ -1,21 +1,20 @@
 import "./style.css";
+import TableHeader from "../TableHeader";
 
 const Table = ({ currencies, hideTable }) => (
     <table className={`table${hideTable ? " table--hidden" : ""}`}>
         <caption className="table__caption">Aktualne kursy walut</caption>
         <thead>
             <tr className="table__row">
-                <th className="table__cell table__cell--header" scope="col">Nazwa</th>
-                <th className="table__cell table__cell--header" scope="col">Waluta</th>
-                <th className="table__cell table__cell--header" scope="col">Kurs</th>
+                <TableHeader scope={"col"} title={"Nazwa"} />
+                <TableHeader scope={"col"} title={"Waluta"} />
+                <TableHeader scope={"col"} title={"Kurs"} />
             </tr>
         </thead>
         <tbody>
             {currencies.map(currency => (
                 <tr className="table__row" key={currency.id}>
-                    <th className="table__cell table__cell--header" scope="row">
-                        {currency.name}
-                    </th>
+                    <TableHeader scope={"row"} title={currency.name} />
                     <td className="table__cell">
                         {currency.id}
                     </td>
