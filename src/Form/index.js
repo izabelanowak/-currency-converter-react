@@ -1,5 +1,6 @@
-import { useState } from "react";
 import "./style.css";
+import { useState } from "react";
+import FormField from "../FormField";
 
 const Form = ({ currencies }) => {
     const [amount, setAmount] = useState("");
@@ -20,32 +21,44 @@ const Form = ({ currencies }) => {
     const calculateResult = (amount, rate) => {
         return amount / rate;
     };
+
     const showResult = () => {
-        setHideResult(hideResult => false);
+        setHideResult(false);
     };
+
     return (
         <form className="form" onSubmit={onFormSubmit}>
             <fieldset className="form__fieldset">
                 <legend className="form__legend">Kalkulator walut</legend>
-                <p>
-                    <label className="form__label">
-                        <span className="form__labelText">Kwota w złotych - PLN*:</span>
-                        <input className="form__input" type="number" min="0" max="1000000000" step="0.01"
-                            required value={amount} onChange={({ target }) => setAmount(target.value)} />
-                    </label>
-                </p>
-                <p>
-                    <label className="form__label">
-                        <span className="form__labelText">Waluta:</span>
-                        {<select className="form__select" value={selectedCurrency} onChange={({ target }) => setSelectedCurrency(target.value)}>
+                <FormField
+                    label={"Kwota w złotych - PLN*:"}
+                    body={
+                        <input
+                            className="form__input"
+                            type="number"
+                            min="0"
+                            max="1000000000"
+                            step="0.01"
+                            required
+                            value={amount}
+                            onChange={({ target }) => setAmount(target.value)}
+                        />}
+                />
+                <FormField
+                    label={"Waluta:"}
+                    body={
+                        <select
+                            className="form__select"
+                            value={selectedCurrency}
+                            onChange={({ target }) => setSelectedCurrency(target.value)}>
                             {currencies.map(currency => (
                                 <option key={currency.id}>
                                     {currency.name}
                                 </option>)
                             )}
-                        </select>}
-                    </label>
-                </p>
+                        </select>
+                    }
+                />
                 <p className={`form__result${hideResult ? " form__result--hidden" : ""}`}>
                     {`Otrzymasz:`} <strong>{result.value.toFixed(2)}</strong> {result.currency}
                 </p>
