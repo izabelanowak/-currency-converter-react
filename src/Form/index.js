@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./style.css";
 
 const Form = ({ currencies }) => {
-    const [amount, setAmount] = useState(1);
+    const [amount, setAmount] = useState(100);
     const [selectedCurrency, setSelectedCurrency] = useState("Euro");
     const [result, setResult] = useState({
         value: 0,
