@@ -50,7 +50,8 @@ const Form = ({ currencies }) => {
                         <select
                             className="form__select"
                             value={selectedCurrency}
-                            onChange={({ target }) => setSelectedCurrency(target.value)}>
+                            onChange={({ target }) => setSelectedCurrency(target.value)}
+                        >
                             {currencies.map(currency => (
                                 <option key={currency.id}>
                                     {currency.name}
