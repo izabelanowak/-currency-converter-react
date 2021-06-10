@@ -67,3 +67,7 @@
     text-align: center;
     padding: 15px;
 }
+
+.form__result--hidden {
+    display: none;
+}

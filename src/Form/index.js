@@ -2,7 +2,8 @@ import { useState } from "react";
 import "./style.css";
 
 const Form = ({ currencies }) => {
-    const [amount, setAmount] = useState(100);
+    const [amount, setAmount] = useState("");
+    const [hideResult, setHideResult] = useState(true);
     const [selectedCurrency, setSelectedCurrency] = useState("Euro");
     const [result, setResult] = useState({
         value: 0,
@@ -19,7 +20,9 @@ const Form = ({ currencies }) => {
     const calculateResult = (amount, rate) => {
         return amount / rate;
     };
-
+    const showResult = () => {
+        setHideResult(hideResult => false);
+    };
     return (
         <form className="form" onSubmit={onFormSubmit}>
             <fieldset className="form__fieldset">
@@ -43,11 +46,11 @@ const Form = ({ currencies }) => {
                         </select>}
                     </label>
                 </p>
-                <p className="form__result">
-                    {`Otrzymasz ${result.value.toFixed(2)} ${result.currency}`}
+                <p className={`form__result${hideResult ? " form__result--hidden" : ""}`}>
+                    {`Otrzymasz:`} <strong>{result.value.toFixed(2)}</strong> {result.currency}
                 </p>
             </fieldset>
-            <button type="submit" className="form__button">Przelicz!</button>
+            <button type="submit" className="form__button" onClick={showResult}>Przelicz!</button>
         </form>
     )
 };
