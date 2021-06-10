@@ -1,0 +1,8 @@
+.result {
+    text-align: center;
+    padding: 15px;
+}
+
+.result--strong {
+    color: #0e6746;
+}

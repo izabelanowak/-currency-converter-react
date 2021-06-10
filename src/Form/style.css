@@ -62,12 +62,3 @@
     background-color: hsl(158, 76%, 40%);
     outline: none;
 }
-
-.form__result {
-    text-align: center;
-    padding: 15px;
-}
-
-.form__result--hidden {
-    display: none;
-}
