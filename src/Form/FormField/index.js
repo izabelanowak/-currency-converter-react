@@ -1,7 +1,9 @@
+import "./style.css";
+
 const FormField = ({ label, children }) => (
-    <p>
-        <label className={"form__label"}>
-            <span className="form__labelText">{label}</span>
+    <p className="formField">
+        <label className={"formField__label"}>
+            <span className="formField__labelText">{label}</span>
             {children}
         </label>
     </p>

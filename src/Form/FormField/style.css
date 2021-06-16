@@ -1,0 +1,6 @@
+.formField__labelText {
+    min-width: 220px;
+    margin-right: 10px;
+    padding: 5px;
+    display: inline-block;
+}
