@@ -1,4 +1,5 @@
 import "./style.css";
+import TableData from "./TableData";
 import TableHeader from "./TableHeader";
 
 const Table = ({ currencies, hideTable }) => (
@@ -15,12 +16,12 @@ const Table = ({ currencies, hideTable }) => (
             {currencies.map(currency => (
                 <tr className="table__row" key={currency.id}>
                     <TableHeader scope="row" title={currency.name} />
-                    <td className="table__cell">
+                    <TableData>
                         {currency.id}
-                    </td>
-                    <td className="table__cell">
+                    </TableData>
+                    <TableData>
                         {currency.exchangeRate}
-                    </td>
+                    </TableData>
                 </tr>
             ))}
         </tbody>
