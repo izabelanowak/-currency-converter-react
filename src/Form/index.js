@@ -23,36 +23,31 @@ const Form = ({ currencies }) => {
         <form className="form" onSubmit={onFormSubmit}>
             <fieldset className="form__fieldset">
                 <legend className="form__legend">Kalkulator walut</legend>
-                <FormField
-                    label={"Kwota w złotych - PLN*:"}
-                    body={
-                        <input
-                            className="form__input"
-                            type="number"
-                            min="0"
-                            max="1000000000"
-                            step="0.01"
-                            required
-                            value={amount}
-                            onChange={({ target }) => setAmount(target.value)}
-                        />}
-                />
-                <FormField
-                    label={"Waluta:"}
-                    body={
-                        <select
-                            className="form__select"
-                            value={selectedCurrency}
-                            onChange={({ target }) => setSelectedCurrency(target.value)}
-                        >
-                            {currencies.map(currency => (
-                                <option key={currency.id}>
-                                    {currency.name}
-                                </option>)
-                            )}
-                        </select>
-                    }
-                />
+                <FormField label={"Kwota w złotych - PLN*:"}>
+                    <input
+                        className="form__input"
+                        type="number"
+                        min="0"
+                        max="1000000000"
+                        step="0.01"
+                        required
+                        value={amount}
+                        onChange={({ target }) => setAmount(target.value)}
+                    />
+                </FormField>
+                <FormField label={"Waluta:"}>
+                    <select
+                        className="form__select"
+                        value={selectedCurrency}
+                        onChange={({ target }) => setSelectedCurrency(target.value)}
+                    >
+                        {currencies.map(currency => (
+                            <option key={currency.id}>
+                                {currency.name}
+                            </option>)
+                        )}
+                    </select>
+                </FormField>
                 <Result result={result} />
             </fieldset>
             <button type="submit" className="form__button">Przelicz!</button>

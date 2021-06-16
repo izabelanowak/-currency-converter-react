@@ -1,8 +1,8 @@
-const FormField = ({ label, body }) => (
+const FormField = ({ label, children }) => (
     <p>
         <label className={"form__label"}>
             <span className="form__labelText">{label}</span>
-            {body}
+            {children}
         </label>
     </p>
 );
