@@ -1,5 +1,5 @@
 import "./style.css";
-import Table from "../Table";
+import Table from "./Table";
 import { useState } from "react";
 
 const TableContainer = ({ currencies }) => {

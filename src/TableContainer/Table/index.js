@@ -1,5 +1,5 @@
 import "./style.css";
-import TableHeader from "../TableHeader";
+import TableHeader from "./TableHeader";
 
 const Table = ({ currencies, hideTable }) => (
     <table className={`table${hideTable ? " table--hidden" : ""}`}>
