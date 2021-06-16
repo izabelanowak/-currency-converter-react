@@ -5,12 +5,12 @@ import Result from "./Result";
 
 const Form = ({ currencies }) => {
     const [amount, setAmount] = useState("");
-    const [selectedCurrency, setSelectedCurrency] = useState("Euro");
+    const [selectedCurrency, setSelectedCurrency] = useState(currencies[0].id);
     const [result, setResult] = useState();
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        const currency = currencies.find(({ name }) => name === selectedCurrency);
+        const currency = currencies.find(({ id }) => id === selectedCurrency);
         const result = calculateResult(amount, currency.exchangeRate);
         setResult({ value: result, currency: currency.id });
     };
@@ -42,7 +42,7 @@ const Form = ({ currencies }) => {
                         onChange={({ target }) => setSelectedCurrency(target.value)}
                     >
                         {currencies.map(currency => (
-                            <option key={currency.id}>
+                            <option key={currency.id} value={currency.id}>
                                 {currency.name}
                             </option>)
                         )}
