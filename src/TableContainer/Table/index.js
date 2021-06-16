@@ -6,15 +6,15 @@ const Table = ({ currencies, hideTable }) => (
         <caption className="table__caption">Aktualne kursy walut</caption>
         <thead>
             <tr className="table__row">
-                <TableHeader scope={"col"} title={"Nazwa"} />
-                <TableHeader scope={"col"} title={"Waluta"} />
-                <TableHeader scope={"col"} title={"Kurs"} />
+                <TableHeader scope="col" title="Nazwa" />
+                <TableHeader scope="col" title="Waluta" />
+                <TableHeader scope="col" title="Kurs" />
             </tr>
         </thead>
         <tbody>
             {currencies.map(currency => (
                 <tr className="table__row" key={currency.id}>
-                    <TableHeader scope={"row"} title={currency.name} />
+                    <TableHeader scope="row" title={currency.name} />
                     <td className="table__cell">
                         {currency.id}
                     </td>

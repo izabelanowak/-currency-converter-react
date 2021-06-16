@@ -23,7 +23,7 @@ const Form = ({ currencies }) => {
         <form className="form" onSubmit={onFormSubmit}>
             <fieldset className="form__fieldset">
                 <legend className="form__legend">Kalkulator walut</legend>
-                <FormField label={"Kwota w złotych - PLN*:"}>
+                <FormField label="Kwota w złotych - PLN*:">
                     <input
                         className="form__input"
                         type="number"
@@ -35,7 +35,7 @@ const Form = ({ currencies }) => {
                         onChange={({ target }) => setAmount(target.value)}
                     />
                 </FormField>
-                <FormField label={"Waluta:"}>
+                <FormField label="Waluta:">
                     <select
                         className="form__select"
                         value={selectedCurrency}
