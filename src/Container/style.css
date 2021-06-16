@@ -3,7 +3,7 @@
     padding: 30px;
     background-image: url("background.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     min-height: 100vh;
-    max-width: 800px;
+    max-width: 100%;
   }
