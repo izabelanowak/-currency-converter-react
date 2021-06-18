@@ -17,7 +17,10 @@ Click here to see my website: [Currency-conventer-react demo](https://izabelanow
 -   create-react-app
 -   Webpack
 -   Babel
--   Hooks
+-   Hooks (useState, useEffect)
+-   setInterval
+  
+  
 ## Description
 
 There is simple currency calculator. You can enter amount of PLN (Polish złoty) and after click in button (Przelicz!) currency is calculated to selected currency. You can choose euro (EUR), pound (GBP), dollar (USD) or swiss franc (CHF).
@@ -27,7 +30,7 @@ You can hide/show table with exchange rates with click of the button.
 ## How to use
 See gif below to see how my calc works!
 
-![Gif demo](public/Currency-converter-demo.gif)
+![Gif demo](./Currency-converter-demo.gif)
 
 # Getting Started with Create React App
 
