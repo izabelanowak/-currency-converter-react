@@ -5,7 +5,7 @@ Welcome to my currency calculator!
 
 ## Preview of the website 
 
-Click here to see my website: [Currency-conventer-react demo](https://izabelanowak.github.io/currency-converter-react/)
+=> [Click here](https://izabelanowak.github.io/currency-converter-react/) to see my website demo. 
 ## Used technologies:
 
 -   Semantic HTML
