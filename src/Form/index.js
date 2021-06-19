@@ -29,7 +29,7 @@ const Form = ({ currencies }) => {
                     <input
                         className="form__input"
                         type="number"
-                        min="0"
+                        min="0.01"
                         max="1000000000"
                         step="0.01"
                         required
