@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import "./style.css";
 
 const Clock = () => {
-    const [actualDate, setActualDate] = useState(new Date());
-    const stringDate = actualDate.toLocaleDateString(
+    const [currentDate, setCurrentDate] = useState(new Date());
+    const stringDate = currentDate.toLocaleDateString(
         undefined,
         {
             weekday: "long",
@@ -18,11 +18,11 @@ const Clock = () => {
 
     useEffect(() => {
         setInterval(() => {
-            setActualDate(new Date());
+            setCurrentDate(new Date());
         }, 1000);
 
         return () => {
-            clearInterval(setActualDate);
+            clearInterval(setCurrentDate);
         };
     }, []);
 
