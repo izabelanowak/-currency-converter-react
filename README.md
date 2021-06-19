@@ -25,7 +25,7 @@ Click here to see my website: [Currency-conventer-react demo](https://izabelanow
 
 There is simple currency calculator. You can enter amount of PLN (Polish złoty) and after click in button (Przelicz!) currency is calculated to selected currency. You can choose euro (EUR), pound (GBP), dollar (USD) or swiss franc (CHF).
 Below the converter there is a table with the average exchange rates valid as of 01/05/2021.
-You can hide/show table with exchange rates with click of the button.
+You can hide/show table with exchange rates with click of the button. There is a clock at the top of the page that displays the current date and time every second.
 
 ## How to use
 See gif below to see how my calc works!
