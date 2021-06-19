@@ -30,7 +30,6 @@ const Clock = () => {
         <p className="clock">
             Dziś jest {stringDate}
         </p>
-
     )
 };
 
