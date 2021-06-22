@@ -17,12 +17,12 @@ const Clock = () => {
     );
 
     useEffect(() => {
-        setInterval(() => {
+        const intervalId = setInterval(() => {
             setCurrentDate(new Date());
         }, 1000);
 
         return () => {
-            clearInterval(setCurrentDate);
+            clearInterval(intervalId);
         };
     }, []);
 
