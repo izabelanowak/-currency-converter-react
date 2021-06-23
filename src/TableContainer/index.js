@@ -1,4 +1,5 @@
-import "./style.css";
+import { Container, Paragraph } from "./styled";
+import { Button } from "../theme";
 import Table from "./Table";
 import { useState } from "react";
 
@@ -10,18 +11,15 @@ const TableContainer = ({ currencies }) => {
     };
 
     return (
-        <div className="tableContainer">
-            <button
-                className="tableContainer__button"
-                onClick={toggleHideTable}
-            >
+        <Container>
+            <Button onClick={toggleHideTable}>
                 {hideTable ? "Wyświetl" : "Ukryj"} aktualne kursy walut
-            </button>
+            </Button>
             <Table currencies={currencies} hideTable={hideTable} />
-            <p className={`tableContainer__paragraph${hideTable ? " tableContainer__paragraph--hidden" : ""}`}>
+            <Paragraph hidden={hideTable}>
                 Srednie kursy walut aktualne na dzień 01.05.2021r.
-            </p>
-        </div>
+            </Paragraph>
+        </Container>
     )
 };
 
