@@ -1,5 +1,9 @@
+import { HeaderCell } from "./styled";
+
 const TableHeader = ({ scope, title }) => (
-    <th className="table__cell table__cell--header" scope={scope}>{title}</th>
+    <HeaderCell as="th" scope={scope}>
+        {title}
+    </HeaderCell>
 );
 
 export default TableHeader;

@@ -1,20 +1,20 @@
-import "./style.css";
+import { Wrapper, Caption, TableRow } from "./styled";
 import TableData from "./TableData";
 import TableHeader from "./TableHeader";
 
 const Table = ({ currencies, hideTable }) => (
-    <table className={`table${hideTable ? " table--hidden" : ""}`}>
-        <caption className="table__caption">Aktualne kursy walut</caption>
+    <Wrapper hidden={hideTable}>
+        <Caption>Aktualne kursy walut</Caption>
         <thead>
-            <tr className="table__row">
+            <TableRow>
                 <TableHeader scope="col" title="Nazwa" />
                 <TableHeader scope="col" title="Waluta" />
                 <TableHeader scope="col" title="Kurs" />
-            </tr>
+            </TableRow>
         </thead>
         <tbody>
             {currencies.map(currency => (
-                <tr className="table__row" key={currency.id}>
+                <TableRow key={currency.id}>
                     <TableHeader scope="row" title={currency.name} />
                     <TableData>
                         {currency.id}
@@ -22,10 +22,10 @@ const Table = ({ currencies, hideTable }) => (
                     <TableData>
                         {currency.exchangeRate}
                     </TableData>
-                </tr>
+                </TableRow>
             ))}
         </tbody>
-    </table>
+    </Wrapper>
 );
 
 export default Table;

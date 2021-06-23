@@ -1,7 +1,9 @@
+import { Cell } from "./styled";
+
 const TableData = ({ children }) => (
-    <td className="table__cell">
+    <Cell>
         {children}
-    </td>
+    </Cell>
 );
 
 export default TableData;
