@@ -1,4 +1,4 @@
-import "./style.css";
+import { Wrapper, Fieldset, Legend, Input, Button } from "./styled";
 import { useState } from "react";
 import Clock from "./Clock";
 import FormField from "./FormField";
@@ -21,13 +21,12 @@ const Form = ({ currencies }) => {
     };
 
     return (
-        <form className="form" onSubmit={onFormSubmit}>
-            <fieldset className="form__fieldset">
-                <legend className="form__legend">Kalkulator walut</legend>
+        <Wrapper onSubmit={onFormSubmit}>
+            <Fieldset>
+                <Legend>Kalkulator walut</Legend>
                 <Clock />
                 <FormField label="Kwota w złotych - PLN*:">
-                    <input
-                        className="form__input"
+                    <Input
                         type="number"
                         min="0.01"
                         max="1000000000"
@@ -38,8 +37,7 @@ const Form = ({ currencies }) => {
                     />
                 </FormField>
                 <FormField label="Waluta:">
-                    <select
-                        className="form__select"
+                    <Input as="select"
                         value={selectedCurrency}
                         onChange={({ target }) => setSelectedCurrency(target.value)}
                     >
@@ -48,12 +46,12 @@ const Form = ({ currencies }) => {
                                 {currency.name} - {currency.id}
                             </option>)
                         )}
-                    </select>
+                    </Input>
                 </FormField>
                 <Result result={result} />
-            </fieldset>
-            <button type="submit" className="form__button">Przelicz!</button>
-        </form>
+            </Fieldset>
+            <Button type="submit">Przelicz!</Button>
+        </Wrapper>
     )
 };
 

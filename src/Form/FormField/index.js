@@ -1,9 +1,9 @@
-import "./style.css";
+import { LabelText} from "./styled";
 
 const FormField = ({ label, children }) => (
-    <p className="formField">
-        <label className="formField__label">
-            <span className="formField__labelText">{label}</span>
+    <p>
+        <label>
+            <LabelText className="formField__labelText">{label}</LabelText>
             {children}
         </label>
     </p>
