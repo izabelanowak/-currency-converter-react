@@ -7,6 +7,7 @@ export const Wrapper = styled.table`
     font-size: 18px;
     border-collapse: collapse;
     background-color: ${({ theme }) => theme.colors.backgroundColor};
+    box-shadow: 0 0 5px ${({ theme }) => theme.colors.accentColor};
 
     ${({ hidden }) => hidden && css`
         display: none;

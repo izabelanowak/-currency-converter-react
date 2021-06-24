@@ -14,6 +14,7 @@ export const Paragraph = styled.p`
     max-width: 600px;
     font-size: 18px;
     text-align: center;
+    box-shadow: 0 0 5px ${({ theme }) => theme.colors.accentColor};
 
     ${({ hidden }) => hidden && css`
         display: none;
