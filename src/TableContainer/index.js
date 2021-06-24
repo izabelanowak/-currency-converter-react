@@ -1,5 +1,5 @@
 import { Container, Paragraph } from "./styled";
-import { Button } from "../theme";
+import { Button } from "../styledButton";
 import Table from "./Table";
 import { useState } from "react";
 

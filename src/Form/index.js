@@ -1,5 +1,5 @@
 import { Wrapper, Fieldset, Legend, Input } from "./styled";
-import { Button } from "../theme";
+import { Button } from "../styledButton";
 import { useState } from "react";
 import Clock from "./Clock";
 import FormField from "./FormField";
