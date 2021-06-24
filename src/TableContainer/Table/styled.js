@@ -6,7 +6,7 @@ export const Wrapper = styled.table`
     max-width: 600px;
     font-size: 18px;
     border-collapse: collapse;
-    background-color: #fff;
+    background-color: ${({ theme }) => theme.colors.backgroundColor};
 
     ${({ hidden }) => hidden && css`
         display: none;
@@ -17,11 +17,11 @@ export const Caption = styled.caption`
     font-size: 22px;
     margin-top: 20px;
     padding: 10px 5px;
-    background-color: #fff;
+    background-color: ${({ theme }) => theme.colors.backgroundColor};
 `;
 
 export const TableRow = styled.tr`
     &:hover {
-        background-color: #ddd;
+        background-color: ${({ theme }) => theme.colors.accentColor};
     }
 `;

@@ -6,5 +6,5 @@ export const ResultParagraph = styled.p`
 `;
 
 export const Strong = styled.strong`
-    color: #0e6746;
+    color: ${({ theme }) => theme.colors.primaryColor};
 `;

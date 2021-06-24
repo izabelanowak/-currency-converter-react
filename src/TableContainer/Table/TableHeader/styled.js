@@ -3,12 +3,12 @@ import { Cell } from "../TableData/styled";
 
 
 export const HeaderCell = styled(Cell)`
-    color: #eee;
-    background-color: #0e6746;
+    color: ${({ theme }) => theme.colors.textColor};
+    background-color: ${({ theme }) => theme.colors.primaryColor};
     font-style: normal;
     font-weight: normal;
 
     &:hover {
-        background-color: hsl(158, 76%, 30%);
+        background-color: ${({ theme }) => theme.colors.hoverColor};
     }
 `;

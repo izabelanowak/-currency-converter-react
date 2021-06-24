@@ -9,7 +9,7 @@ export const Container = styled.div`
 export const Paragraph = styled.p`
     margin: 10px auto;
     padding: 10px 5px;
-    background-color: #fff;
+    background-color: ${({ theme }) => theme.colors.backgroundColor};
     width: 100%;
     max-width: 600px;
     font-size: 18px;
