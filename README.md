@@ -10,7 +10,6 @@ Welcome to my currency calculator!
 
 -   Semantic HTML
 -   CSS
--   BEM naming
 -   ES6+ features
 -   Immutability
 -   React
@@ -19,7 +18,8 @@ Welcome to my currency calculator!
 -   Babel
 -   Hooks (useState, useEffect)
 -   setInterval
-  
+-   Styled-components
+-   custom Hooks
   
 ## Description
 
